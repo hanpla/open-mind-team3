@@ -6,6 +6,7 @@ import GlobalStyle from "@/styles/GlobalStyle";
 
 import HomePage from "@/pages/HomePage";
 import ListPage from "@/pages/ListPage";
+import PostTest from "@/components/containers/AnswerCard/PostTest";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="/list" element={<ListPage />} />
+          <Route path="/answer" element={<PostTest />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

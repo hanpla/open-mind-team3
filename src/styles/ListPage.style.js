@@ -51,7 +51,7 @@ export const MainSection = styled.main`
   padding: 40px 24px;
 `;
 
-export const ListHeader = styled.div`
+export const MainHeader = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

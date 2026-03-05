@@ -18,6 +18,7 @@ export default function HomeForm() {
     try {
       const data = await createSubject(input);
       localStorage.setItem("myFeedId", data.id);
+
       navigate(`/post/${data.id}/answer`);
     } catch (error) {
       alert("피드 생성에 실패했습니다.");
@@ -32,23 +33,25 @@ export default function HomeForm() {
         placeholder="이름을 입력해주세요"
         onChange={(e) => setInput(e.target.value)}
       />
-      <BasicButton>질문 받기</BasicButton>
+      <BasicButton type="submit">질문 받기</BasicButton>
     </FormContainer>
   );
 }
 
 const FormContainer = styled.form`
+  background-color: ${({ theme }) => theme.colors.gray10};
+
   width: 100%;
   max-width: 400px;
   padding: 32px;
-  background-color: ${({ theme }) => theme.colors.gray10};
   border-radius: 16px;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
 
   @media (min-width: 768px) {
-    padding: 40px;
     max-width: 456px;
+    padding: 40px;
   }
 `;

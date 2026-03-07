@@ -19,7 +19,7 @@ const INPUT_LIMIT = 12;
 export const Dropdown = ({ onClick }) => {
   const [input, setInput] = useState("");
 
-  // TODO: api 및 기능 추가
+  // TODO: api 및 기능 추가 (빈 인풋 방지, 공백 불가)
   const handleDropdownFormSubmit = (e) => {
     e.preventDefault();
   };

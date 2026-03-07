@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { SecondButton } from "@/components/common/Button/Button.style";
 
@@ -7,33 +7,52 @@ export const DropdownButton = styled(SecondButton)`
 
   svg {
     position: absolute;
-    right: 12px;
-
     top: 50%;
+    right: 12px;
     transform: translateY(-50%);
   }
 `;
 
-const fadeIn = keyframes`
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-`;
-
 export const FormContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* 버튼들 사이의 간격 */
   align-items: center;
+  gap: 16px;
 `;
 
-// 이미지 속 폼의 하얀 박스 스타일
-export const DropdownWrapper = styled.form`
-  width: 100%;
-  max-width: 400px;
-  background-color: ${({ theme }) => theme.colors.gray10};
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: ${({ theme }) => theme.shadows.pt2};
-  animation: ${fadeIn} 0.3s ease-out;
+export const DropdownForm = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid ${({ theme }) => theme.colors.brown40};
+  border-radius: 8px;
+
+  padding-bottom: 8px;
+`;
+
+export const DropdownHeader = styled(DropdownButton)`
+  border: none;
+  background-color: inherit;
+
+  &:hover {
+    border: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+  }
+`;
+
+export const InputWrapper = styled.div`
+  padding: 0 8px 8px;
+`;
+
+export const InputButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 8px 8px;
 `;

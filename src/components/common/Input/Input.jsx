@@ -44,8 +44,8 @@ export const CountInput = ({
       </S.IconWrapper>
     )}
     <S.StyledInput {...props} maxLength={limit} />
-    <S.CharCount>
+    <S.InputCount>
       {current} / {limit}
-    </S.CharCount>
+    </S.InputCount>
   </S.InputContainer>
 );

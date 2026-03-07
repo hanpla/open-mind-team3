@@ -5,9 +5,9 @@ import { Toaster } from "react-hot-toast";
 import { theme } from "@/styles/theme";
 import GlobalStyle from "@/styles/GlobalStyle";
 
-import HomePage from "@/pages/HomePage";
 import ListPage from "@/pages/ListPage";
 import PostTest from "@/components/containers/AnswerCard/PostTest";
+import HomePage from "@/pages/HomePage/HomePage";
 
 export default function App() {
   return (

@@ -7,13 +7,12 @@ import { Link } from "react-router-dom";
 import {
   DefaultDropdownButton,
   Dropdown,
-} from "@/components/containers/Home/HomeDropdown/Dropdown";
+} from "@/components/containers/Home/HomeDropdown/HomeDropdown";
 
 export default function HomeForm() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleDropdownButtonClick = (e) => {
-    e.preventDefault();
+  const handleDropdownButtonClick = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
@@ -24,7 +23,7 @@ export default function HomeForm() {
       </BasicButton>
 
       {isDropdownOpen ? (
-        <Dropdown />
+        <Dropdown onClick={handleDropdownButtonClick} />
       ) : (
         <DefaultDropdownButton onClick={handleDropdownButtonClick} />
       )}

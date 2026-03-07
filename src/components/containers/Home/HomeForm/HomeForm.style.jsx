@@ -1,19 +1,20 @@
+import { media } from "@/styles/media";
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.gray10};
-
-  width: 100%;
-  max-width: 400px;
-  padding: 32px;
-  border-radius: 16px;
-
   display: flex;
   flex-direction: column;
   gap: 16px;
 
-  @media (min-width: 768px) {
-    max-width: 456px;
+  width: 100%;
+  max-width: 305px;
+  padding: 32px;
+
+  background-color: ${({ theme }) => theme.colors.gray10};
+  border-radius: 16px;
+
+  ${media.tablet`
+   max-width: 456px;
     padding: 40px;
-  }
+ `}
 `;

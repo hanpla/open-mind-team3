@@ -1,4 +1,6 @@
-export default function LogoImg({ width = "100%", ...props }) {
+import { memo } from "react";
+
+function LogoImg({ width = "100%", ...props }) {
   return (
     <svg
       width={width}
@@ -93,3 +95,5 @@ export default function LogoImg({ width = "100%", ...props }) {
     </svg>
   );
 }
+
+export default memo(LogoImg);

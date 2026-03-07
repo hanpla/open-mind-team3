@@ -67,6 +67,8 @@ export const Input = ({
   onRightIconClick,
   iconColor,
   iconSize,
+  limitInput,
+  currentLength,
   ...props
 }) => {
   const defaultColor = iconColor || theme.colors.gray40;
@@ -92,6 +94,12 @@ export const Input = ({
         <IconWrapper $isRight onClick={onRightIconClick}>
           <RightIcon size={defaultSize} color={defaultColor} />
         </IconWrapper>
+      )}
+
+      {limitInput && (
+        <CharCount>
+          {currentLength} / {limitInput}
+        </CharCount>
       )}
     </InputContainer>
   );

@@ -1,6 +1,6 @@
 import * as S from "./HomePage.style";
-import HomeHeader from "@/components/containers/Home/HomeHeader/HomeHeader";
-import HomeForm from "@/components/containers/Home/HomeForm/HomeForm";
+import HomeHeader from "@/components/containers/Home/HomeHeader";
+import HomeForm from "@/components/containers/Home/HomeForm";
 
 export default function HomePage() {
   return (

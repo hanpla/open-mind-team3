@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.form`
+export const FormContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.gray10};
 
   width: 100%;

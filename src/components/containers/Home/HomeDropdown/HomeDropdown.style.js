@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import { SecondButton } from "@/components/common/Button";
+import { SecondButton } from "@/components/common/Button/Button.style";
 
 export const DropdownButton = styled(SecondButton)`
   position: relative;

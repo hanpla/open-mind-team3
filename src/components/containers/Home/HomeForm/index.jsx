@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 import * as S from "./HomeForm.style";
-import { BasicButton } from "@/components/common/Button";
+
+import { BasicButton } from "@/components/common/Button/Button.style";
+import { Link } from "react-router-dom";
 import {
   DefaultDropdownButton,
-  DropdownForm,
-} from "@/components/containers/Home/HomeDropdown";
+  Dropdown,
+} from "@/components/containers/Home/HomeDropdown/Dropdown";
 
 export default function HomeForm() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -17,10 +19,12 @@ export default function HomeForm() {
 
   return (
     <S.FormContainer>
-      <BasicButton type="submit">질문하러 가기</BasicButton>
+      <BasicButton as={Link} to="/list">
+        질문하러 가기
+      </BasicButton>
 
       {isDropdownOpen ? (
-        <DropdownForm />
+        <Dropdown />
       ) : (
         <DefaultDropdownButton onClick={handleDropdownButtonClick} />
       )}
